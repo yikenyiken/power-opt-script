@@ -1,6 +1,6 @@
-# Linux Power Optimization & Diagnostics Script
+# Linux Power Optimization Script
 
-Automated Bash utility for Linux (laptops especially) that measures real-time battery power consumption, dynamically detects background resource drainers, and applies system-wide optimizations to extend battery life and reduce thermal output.
+Automated Bash utility for Linux (laptops especially) that dynamically detects background resource drainers, and applies system-wide optimizations to extend battery life and reduce thermal output.
 
 ---
 
@@ -11,7 +11,6 @@ Before executing this script on your machine, please read the following:
 * **Requires Root Privileges:** The script modifies systemd services and kernel tuneables via `/sys`, so it must be run with `sudo`.
 * **Disables Active Services Immediately:** The script automatically stops and disables running background daemons (such as Docker, database servers, web servers, printing services, etc.) if they are actively running when the script is executed.
 * **Impact on Development Environments:** If you rely on background services (e.g., Docker containers, PostgreSQL, Apache) for active local development, you will need to start them manually after running this script (`sudo systemctl start <service>`).
-* **Hardware Scope:** Power measurements rely on `/sys/class/power_supply/BAT*` telemetry. Wattage savings can only be calculated when running **on battery power** on supported laptop hardware.
 
 ---
 
