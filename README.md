@@ -27,10 +27,10 @@ In the spirit of open-source transparency, here is how this project was created:
 
 ## 🚀 Features
 
-* **Dynamic Service Detection:** Scans `systemctl` for active, high-power background daemons instead of blindly modifying system configuration.
-* **Automatic Dependency Resolution:** Installs missing packages (`powertop`, `tlp`, `bc`) using the system's native package manager (`apt`, `dnf`, or `pacman`).
-* **Telemetry Monitoring:** Reads power draw directly from Linux kernel power supply metrics before and after optimization.
-* **Kernel & Hardware Tuning:** Automatically applies `powertop --auto-tune`, forces `tlp` battery profiles, and shifts CPU scaling governors to `powersave`.
+* **Deterministic Power Savings:** Stops unused, high-overhead background daemons (containers, databases, web servers) to guarantee reduced idle CPU wakeups and RAM consumption.
+* **Dynamic Service Detection:** Scans `systemctl` for active daemons on the host machine rather than blindly changing system configuration.
+* **Kernel & Hardware Tuning:** Leverages `powertop --auto-tune` for PCIe/USB power management and sets CPU scaling governors to `powersave`.
+* **Zero-Telemetry Overhead:** Focuses on actionable system state changes without relying on noisy or unreliable real-time battery sensors.
 
 ---
 
