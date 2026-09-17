@@ -46,7 +46,7 @@ In the spirit of open-source transparency, here is how this project was created:
 
 1. **Clone or download the repository:**
    ```bash
-   git clone [https://github.com/yikenyiken/power-opt-script.git](https://github.com/yikenyiken/power-opt-script.git)
+   git clone https://github.com/yikenyiken/power-opt-script.git
    cd power-opt-script
 
 ```
